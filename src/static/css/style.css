@@ -1,0 +1,15 @@
+.main{
+    background-image: url('../images/background.jpg');
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+}
+.sub-main{
+    background-color: rgba(0,0,0,0.6);
+    padding: 100px;
+    color: white;
+    border-radius: 63% 37% 66% 34% / 19% 44% 56% 81%  ;
+}
