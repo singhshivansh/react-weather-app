@@ -13,3 +13,9 @@
     color: white;
     border-radius: 63% 37% 66% 34% / 19% 44% 56% 81%  ;
 }
+
+@media (max-width: 768px) {
+    .sub-main{
+    padding: 40px;
+    }
+}

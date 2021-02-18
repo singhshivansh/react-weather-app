@@ -20,11 +20,11 @@ function Weather_index(){
 
     return(
         <>
-            <div className="main">
+            <div className="main ">
                 <div className="sub-main">
                     <div className="container">
                         <div className="input">
-                            <input type="text"  onChange={(event) => {setSearch(event.target.value)}} className="form-input my-3" placeholder="Enter City to search"/>
+                            <input type="text"  onChange={(event) => {setSearch(event.target.value)}} className="form-control my-3" placeholder="Enter City to search"/>
                         </div>
                     </div>
                     {
@@ -35,11 +35,13 @@ function Weather_index(){
                                 <div className="info">
                                     <div className="place">
                                     </div>
-                                    <div className="temp">
-                                        <h2>City Name : {search}</h2>
-                                        <h3>Current Temp : {city.temp}</h3>
-                                        <h3>Humidity : {city.humidity}</h3>
-                                        <h4>Max Temp. : {city.temp_max} Min Temp : {city.temp_min} </h4>
+                                    <div className="temp font-mono lg:text-xl md:text-sm md:max-w-xl">
+                                        <h2 className="py-1"><span className="lg:text-3xl font-semibold text-gray-400	">City Name:</span> <span className="font-sans lg:text-3xl">{search}</span></h2>
+                                        <h3 className="py-1"><span className="lg:text-3xl md:leading-3 font-semibold text-gray-400">Current Temp:</span> <span className="lg:text-3xl font-sans">{((city.temp) -273.1).toPrecision(4)} °C</span>
+                                            
+                                        </h3>
+                                        <h3 className="py-1"><span className="lg:text-3xl font-semibold text-gray-400">Humidity:</span> <span className="lg:text-2xl font-sans">{city.humidity}</span></h3>
+                                        <h4 className="py-1"><span className="lg:text-2xl font-mono font-semibold text-gray-400">Max Temp.:</span> {(city.temp_max - 273.1).toPrecision(4)} °C   <span className="text-gray-400 lg:text-2xl font-mono font-semibold">Max Temp.:</span> {(city.temp_min - 273.1).toPrecision(4)} °C </h4>
                                     </div>
                                 </div>
                             </div>
