@@ -1,5 +1,6 @@
 import react, {useState, useEffect} from 'react'
 import '../static/css/style.css'
+import {TextField} from '@material-ui/core'
 
 
 function Weather_index(){
@@ -23,7 +24,7 @@ function Weather_index(){
                 <div className="sub-main">
                     <div className="container">
                         <div className="input">
-                            <input type="text"  onChange={(event) => {setSearch(event.target.value)}} className="form-control my-3" placeholder="Enter City to search"/>
+                            <input type="text"  onChange={(event) => {setSearch(event.target.value)}} className="form-input my-3" placeholder="Enter City to search"/>
                         </div>
                     </div>
                     {
